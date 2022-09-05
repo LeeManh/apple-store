@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    @apply font-body text-base;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto max-w-7xl px-8;
+  }
+  .headerLink {
+    @apply cursor-pointer font-semibold tracking-wide opacity-75 transition hover:opacity-100;
+  }
+  .hover-effect {
+    @apply cursor-pointer font-bold opacity-75 transition hover:opacity-100;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-r from-pink-500 to-violet-500;
+  }
+  .button {
+    @apply gradient-bg rounded-md px-8 py-3 tracking-wide text-white;
+  }
+  .link {
+    @apply relative cursor-pointer font-semibold tracking-wide text-black before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:rounded before:bg-black;
+  }
+  .title {
+    @apply text-3xl font-semibold capitalize tracking-wide sm:text-4xl lg:text-6xl;
+  }
+  .title-secondary {
+    @apply text-center text-4xl font-medium capitalize text-white;
+  }
+  .tab-content {
+    @apply grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-items-center {
+    @apply flex items-center;
+  }
+}
